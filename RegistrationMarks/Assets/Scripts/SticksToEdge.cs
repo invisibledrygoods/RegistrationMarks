@@ -54,9 +54,14 @@ public class SticksToEdge : MonoBehaviour
     {
         Transform ancestor = transform.parent;
 
-        while (ancestor.camera == null)
+        while (ancestor != null && ancestor.camera == null)
         {
             ancestor = ancestor.parent;
+        }
+
+        if (ancestor == null)
+        {
+            return;
         }
 
         Camera parentCamera = ancestor.camera;
