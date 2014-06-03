@@ -41,8 +41,6 @@ public class SticksToEdge : MonoBehaviour
             x = Screen.width / 2;
         }
 
-        // TODO: redo this logic using vectors
-
         Vector3 bottom = parentCamera.ScreenToWorldPoint(new Vector3(x, 0, distanceFromCamera));
         Vector3 top = parentCamera.ScreenToWorldPoint(new Vector3(x, Screen.height, distanceFromCamera));
 
